@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script>
+
+jQuery(document).ready(function($){
+    $('.colors li').click( function(){
+      	 var color = $(this).attr('data-color');
+      	 $('#Overlay').css('fill',color)
+    });
+});
+
+	</script>
+
+	<style>
+	
+	.colors li {
+		width:50px;
+		float: left;
+		height: 50px;
+		display: inline-block;
+		border:2px solid #000;
+	}
+
+	.colors li.red {background-color: red;}
+	.colors li.green {background-color: green;}
+	.colors li.yellow {background-color: yellow;}
+	.colors li.reset {background-color: #fff;}
+
+
+	</style>
+</head>
+<body>
+	
+<!--Truck-->
+<div width="100%">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="390" height="287.1" viewBox="0 0 390 287.1">
+    <g style="isolation: isolate">
+    <g id="Layer_1" data-name="Layer 1">
+      <g id="cg3Grx">
+      	      <image width="1300" height="957" transform="scale(0.3)" xlink:href="truck.jpg">
+      </g>
+      <path id="truck" d="M787.11,177.37a33,33,0,0,0-14.75-15.72c-13.65-7.32-33.45-6.81-47.08.42-14.77,7.84-17.67,25.5-18.33,40.68a121.28,121.28,0,0,0,.69,19.9c-3.18,12.55-.89,27.5,11.26,34.37,14.44,8.16,32.89,1,45.66-7.25,7.1-4.59,10.27-11.28,13-19,3.28-9.47,6.84-18.92,9.66-28.54C789.55,194,790.54,185.38,787.11,177.37Z" transform="translate(-550.67 -88.45)" style="fill: #eaef18;mix-blend-mode: multiply"/>
+    </g>
+  </g>
+</svg>
+</div>
+
+<!--car-->
+<div>
+<svg id="Base" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1178 458">
+	<!--defs>
+		<clipPath id="clip-path"><rect width="1178" height="458" style="fill:none"/></clipPath>
+	</defs-->
+<g style="isolation: isolate">
+	<g id="Base" data-name="Base">
+		<g style="clip-path:url(#clip-path)">
+			<image id="Layer_0" data-name="Layer 0" width="1178" height="458" xlink:href="Miata-with-overlay-bottom.png"/>
+		</g>
+			<image id="Overlay" data-name="Overlay" width="1178" height="458" xlink:href="Miata-with-overlay-top.png" style="fill: #eaef18;mix-blend-mode: multiply"/>
+
+	</g>
+</g>
+	
+</svg>
+</div>
+
+<ul class="colors">
+	<li class="red" data-color="red"></li>
+	<li class="yellow" data-color="yellow"></li>
+	<li class="green" data-color="green"></li>
+	<li class="reset" data-color="#fff">RESET</li>
+</ul>
+
+</body>
+</html>
